@@ -66,7 +66,7 @@ python generate.py --output gen/ --batch 64
 
 ## Result
 
-We extracted 4096 images from the face data provided [Labeled Faces in the Wild](http://vis-www.cs.umass.edu/lfw/), and learned.
+We extracted 4096 images from the face data provided [Labeled Faces in the Wild](http://vis-www.cs.umass.edu/lfw/), and trained.
 
 ### 30 epochs
 ![30](https://i.imgur.com/PrQkuVP.jpg)
