@@ -3,7 +3,6 @@ from argparse import ArgumentParser
 from utils.file import load_model
 from utils.image import save_images, to_dirname
 from utils.generation import generate
-# 使用ネットワーク
 
 
 def get_args():
@@ -11,7 +10,6 @@ def get_args():
     parser = ArgumentParser(description=description)
     parser.add_argument('-b', '--batch', type=int, default=64, help='number of generated images')
     parser.add_argument('-o', '--output', type=str, default='gen', help='output directory path')
-    parser.add_argument('-a', '--acc', type=float, default=0, help='acceptable range of accuracy')
     return parser.parse_args()
 
 
