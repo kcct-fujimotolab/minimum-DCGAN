@@ -17,7 +17,7 @@ def get_args():
     parser.add_argument('-b', '--batch', type=int, default=64, help='batch size')
     parser.add_argument('-e', '--epoch', type=int, default=500, help='number of epochs')
     parser.add_argument('-s', '--save', type=int, default=20, help='snapshot taking interval')
-    parser.add_argument('-i', '--input', type=str, default='images', help='dataset path')
+    parser.add_argument('-i', '--input', type=str, default='images', help='data sets path')
     parser.add_argument('-o', '--output', type=str, default='gen', help='output directory path')
     return parser.parse_args()
 
