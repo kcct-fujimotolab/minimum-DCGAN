@@ -38,3 +38,4 @@ def train(G, D, GAN, sets, batch):
         print('Step: '+str(step+1)+'/'+str(steps), end='')
         print(' - D loss: '+str(D_loss)+' - GAN loss: '+str(GAN_loss), end='\r')
     print()
+    return [D_loss, GAN_loss]
