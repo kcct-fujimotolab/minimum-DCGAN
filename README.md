@@ -1,2 +1,75 @@
 # DCGAN
-Implementation of a basic and versatile DCGAN model using Keras
+Implementation of basic and versatile DCGAN model using Keras.
+
+## Description
+
+Do automatically that loading images from the specified directory, resizing and training.
+Able to record images generated during training.
+Able to load trained models and generate images.
+
+## Requirement
+
+- Python 3.0 or more
+- Keras 2.0 or more (Tensorflow backend)
+- Pillow
+- numpy
+- tqdm
+- h5py
+
+## Get started
+
+Clone this repository:
+```sh
+git clone https://github.com/kcct-fujimotolab/DCGAN.git
+cd DCGAN/
+```
+
+Make a directory for data sets:
+```sh
+mkdir images
+```
+
+Collect images (more than thousands better):
+```sh
+ls images/
+data000.jpg   data001.jpg   ...   data999.jpg
+```
+
+Start training with specify image size, number of epochs, data set directory, etc.:
+```sh
+python train.py --input images/ --size 64 64 --epoch 1000
+```
+
+Generate images with specify output directory, number of batches:
+```sh
+python generate.py --output gen/ --batch 64
+```
+
+## Options
+
+`--help` `-h`: show information
+
+### train.py
+
+`--input` `-i`: data sets path (default `-i images/`)
+`--size` `-z`: image size during training, **2 values required**, **must be a multiple of 8** (default `-z 64 64`)
+`--epoch` `-e`: number of epochs (default `-e 500`)
+`--batch` `-b`: batch size (default `-b 64`)
+`--dim` `-d`: generator input dimension (default `-d 100`)
+`--output` `-o`: output directory path (default `-i gen/`)
+`--save` `-s`: snapshot taking interval (default `-i 20`)
+
+### generate.py
+
+`--output` `-o` output directory path (default `-o gen/`)
+`--batch` `-b` number of generated images (default `-b 64`)
+
+## Result
+
+Coming soon...
+
+## Author
+
+[Fujimoto Lab](http://www.kobe-kosen.ac.jp/~fujimoto/) in [Kobe City College of Technology](http://www.kobe-kosen.ac.jp)
+Undergraduate student of Electronic engineering major
+[@yoidea](https://twitter.com/yoidea)
