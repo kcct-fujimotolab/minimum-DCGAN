@@ -24,17 +24,17 @@ def train(G, D, GAN, sets, batch):
         samples = len(real)
         # 本物画像の学習
         answer = np.ones(samples)
-        D_loss = D.train_on_batch(real, answer)
+        D_loss = D.train_on_batch(x=real, y=answer)
         # 偽物画像の学習
         noise = np.random.uniform(0, 1, size=(samples, input_dim))
         generated = G.predict(noise)
         answer = np.zeros(samples)
-        D_loss = D.train_on_batch(generated, answer)
+        D_loss = D.train_on_batch(x=generated, y=answer)
         # 生成器の学習
         noise = np.random.uniform(0, 1, size=(samples, input_dim))
         answer = np.ones(samples)
-        GAN_loss = GAN.train_on_batch(noise, answer)
+        GAN_loss = GAN.train_on_batch(x=noise, y=answer)
         # 進捗表示
-        print('Step: ' + str(step + 1) + '/' + str(steps), end='')
-        print(' - D loss: ' + str(D_loss) + ' - GAN loss: ' + str(GAN_loss), end='\r')
+        print('Step: '+str(step+1)+'/'+str(steps), end='')
+        print(' - D loss: '+str(D_loss)+' - GAN loss: '+str(GAN_loss), end='\r')
     print()

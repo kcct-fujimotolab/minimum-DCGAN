@@ -42,7 +42,7 @@ def save_images(images, name, ext='.jpg'):
     for i in range(len(images)):
         image = Image.fromarray(images[i])
         # "*/result[0-9]*.jpg" の形で保存
-        image.save(name + '/result' + str(i) + ext)
+        image.save(name+'/result'+str(i)+ext)
 
 
 def load_images(name, size, ext='.jpg'):
@@ -60,7 +60,7 @@ def load_images(name, size, ext='.jpg'):
         if os.path.splitext(file)[1] != ext:
             # 拡張子が違うなら処理しない
             continue
-        image = Image.open(name + file)
+        image = Image.open(name+file)
         if image.mode != "RGB":
             # 3ch 画像でなければ変換する
             image.convert("RGB")
