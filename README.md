@@ -51,17 +51,17 @@ python generate.py --output gen/ --batch 64
 
 ### train.py
 
-`--input` `-i`: data sets path (default `-i images/`)
-`--size` `-z`: image size during training, **2 values required**, **must be a multiple of 8** (default `-z 64 64`)
-`--epoch` `-e`: number of epochs (default `-e 500`)
-`--batch` `-b`: batch size (default `-b 64`)
-`--dim` `-d`: generator input dimension (default `-d 100`)
-`--output` `-o`: output directory path (default `-i gen/`)
+`--input` `-i`: data sets path (default `-i images/`)  
+`--size` `-z`: image size during training, **2 values required**, **must be a multiple of 8** (default `-z 64 64`)  
+`--epoch` `-e`: number of epochs (default `-e 500`)  
+`--batch` `-b`: batch size (default `-b 64`)  
+`--dim` `-d`: generator input dimension (default `-d 100`)  
+`--output` `-o`: output directory path (default `-i gen/`)  
 `--save` `-s`: snapshot taking interval (default `-i 20`)
 
 ### generate.py
 
-`--output` `-o` output directory path (default `-o gen/`)
+`--output` `-o` output directory path (default `-o gen/`)  
 `--batch` `-b` number of generated images (default `-b 64`)
 
 ## Result
@@ -70,6 +70,6 @@ Coming soon...
 
 ## Author
 
-[Fujimoto Lab](http://www.kobe-kosen.ac.jp/~fujimoto/) in [Kobe City College of Technology](http://www.kobe-kosen.ac.jp)
-Undergraduate student of Electronic engineering major
+[Fujimoto Lab](http://www.kobe-kosen.ac.jp/~fujimoto/) in [Kobe City College of Technology](http://www.kobe-kosen.ac.jp)  
+Undergraduate student of Electronic engineering major  
 [@yoidea](https://twitter.com/yoidea)
