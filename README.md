@@ -66,7 +66,19 @@ python generate.py --output gen/ --batch 64
 
 ## Result
 
-Coming soon...
+We extracted 4096 images from the face data provided [Labeled Faces in the Wild](http://vis-www.cs.umass.edu/lfw/), and learned.
+
+### 30 epochs
+![30](https://i.imgur.com/PrQkuVP.jpg)
+
+### 600 epochs
+![600](https://i.imgur.com/77kPHTO.jpg)
+
+### 1200 epochs
+![1200](https://i.imgur.com/TWri1m9.jpg)
+
+### 1500 epochs
+![1500](https://i.imgur.com/sKjWmpT.jpg)
 
 ## Author
 
