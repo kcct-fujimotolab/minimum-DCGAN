@@ -3,9 +3,9 @@ Implementation of basic and versatile DCGAN model using Keras.
 
 ## Description
 
-Do automatically that loading images from the specified directory, resizing and training.
-Able to record images generated during training.
-Able to load trained models and generate images.
+These programs load images from the specified directory, resize and train.
+You can record images generated during training.
+You can load trained models and generate images.
 
 ## Requirement
 
@@ -18,29 +18,29 @@ Able to load trained models and generate images.
 
 ## Get started
 
-Clone this repository:
+1. Clone this repository:
 ```sh
 git clone https://github.com/kcct-fujimotolab/DCGAN.git
 cd DCGAN/
 ```
 
-Make a directory for data sets:
+2. Make a directory for data sets:
 ```sh
 mkdir images
 ```
 
-Collect images (more than thousands better):
+3. Collect images (more than thousands better):
 ```sh
 ls images/
 data000.jpg   data001.jpg   ...   data999.jpg
 ```
 
-Start training with specify image size, number of epochs, data set directory, etc.:
+4. Start training with specify image size, number of epochs, data set directory, etc.:
 ```sh
 python train.py --input images/ --size 64 64 --epoch 1000
 ```
 
-Generate images with specify output directory, number of batches:
+5. Generate images with specify output directory, number of batches:
 ```sh
 python generate.py --output gen/ --batch 64
 ```
@@ -64,7 +64,7 @@ python generate.py --output gen/ --batch 64
 `--output` `-o` output directory path (default `-o gen/`)  
 `--batch` `-b` number of generated images (default `-b 64`)
 
-## Result
+## Results
 
 We extracted 4096 images from the face data provided [Labeled Faces in the Wild](http://vis-www.cs.umass.edu/lfw/), and trained.
 
