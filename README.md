@@ -3,7 +3,7 @@ Implementation of basic and versatile DCGAN model using Keras.
 
 ## Description
 
-These programs load images from the specified directory, resize and train.
+These programs can load images from the specified directory, resize and train.
 You can record images generated during training.
 You can load trained models and generate images.
 
@@ -35,12 +35,12 @@ ls images/
 data000.jpg   data001.jpg   ...   data999.jpg
 ```
 
-4. Start training with specify image size, number of epochs, data set directory, etc.:
+4. Start training with specifying image size, number of epochs, data set directory, etc.:
 ```sh
 python train.py --input images/ --size 64 64 --epoch 1000
 ```
 
-5. Generate images with specify output directory, number of batches:
+5. Generate images with specifying output directory, number of batches:
 ```sh
 python generate.py --output gen/ --batch 64
 ```
