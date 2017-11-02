@@ -35,10 +35,10 @@ def main():
     # モデルを構築
     G = build_generator(input_dim=input_dim, output_size=image_size)
     D = build_discriminator(input_size=image_size)
-    GAN = build_GAN(G, D)
     # モデルをコンパイル
     optimizer = Adam(lr=1e-5, beta_1=0.1)
     D.compile(loss='binary_crossentropy', optimizer=optimizer)
+    GAN = build_GAN(G, D)
     # この値にするとうまくいく、正直職人芸
     optimizer = Adam(lr=1e-4, beta_1=0.5)
     GAN.compile(loss='binary_crossentropy', optimizer=optimizer)
