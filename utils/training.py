@@ -2,6 +2,19 @@ import math
 import numpy as np
 
 
+def display(step, steps, D_loss, GAN_loss):
+    """
+    学習の進行状況を表示する
+    # 引数
+        step : Integer, 現在のステップ
+        steps : Integer, ステップ数
+        D_loss : Float, 損失値
+        GAN_loss : Float, 損失値
+    """
+    print('Step: '+str(step+1)+'/'+str(steps), end='')
+    print(' - D loss: '+str(D_loss)+' - GAN loss: '+str(GAN_loss), end='\r')
+
+
 def train(G, D, GAN, sets, batch):
     """
     ネットワークの学習を行う
@@ -36,7 +49,6 @@ def train(G, D, GAN, sets, batch):
         answer = np.ones(samples)
         GAN_loss = GAN.train_on_batch(x=noise, y=answer)
         # 進捗表示
-        print('Step: '+str(step+1)+'/'+str(steps), end='')
-        print(' - D loss: '+str(D_loss)+' - GAN loss: '+str(GAN_loss), end='\r')
+        display(step, steps, D_loss, GAN_loss)
     print()
     return (D_loss, GAN_loss)
