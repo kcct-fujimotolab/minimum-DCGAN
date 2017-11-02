@@ -18,7 +18,6 @@ def main():
     # パラメータ設定
     batch = args.batch # 出力枚数
     output_dirname = to_dirname(args.output) # 出力先ディレクトリ
-    acc = args.acc # 許容出力精度
     # モデルを読み込み
     G = load_model('G_model.json')
     D = load_model('D_model.json')

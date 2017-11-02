@@ -51,10 +51,10 @@ def main():
     for epoch in range(epochs):
         print('Epoch: '+str(epoch+1)+'/'+str(epochs))
         train(G, D, GAN, sets=images, batch=batch)
-        if epoch + 1 % save_freq == 0:
+        if (epoch + 1) % save_freq == 0:
             # 一定間隔でスナップショットを撮る
             results = generate(G, batch=batch)
-            save_images(results, name=output_dirname+str(epoch))
+            save_images(results, name=output_dirname+str(epoch+1))
             G.save_weights('G_weights.hdf5')
             D.save_weights('D_weights.hdf5')
 
