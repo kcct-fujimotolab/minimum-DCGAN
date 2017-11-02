@@ -1,3 +1,4 @@
+import math
 import numpy as np
 
 
@@ -11,13 +12,13 @@ def train(G, D, GAN, sets, batch):
         sets : 学習用データセット
         batch : Integer, バッチサイズ
     # 戻り値
-        loss : List, 損失値
+        loss : Tuple, 損失値
     """
     # データセットをシャッフル
     np.random.shuffle(sets)
     input_dim = G.input_shape[1]
     # バッチサイズからループ回数を求める
-    steps = len(sets) // batch + 1
+    steps = math.ceil(len(sets) / batch)
     for step in range(steps):
         # データセットからバッチサイズだけ抽出
         real = sets[step*batch:(step+1)*batch]
@@ -38,4 +39,4 @@ def train(G, D, GAN, sets, batch):
         print('Step: '+str(step+1)+'/'+str(steps), end='')
         print(' - D loss: '+str(D_loss)+' - GAN loss: '+str(GAN_loss), end='\r')
     print()
-    return [D_loss, GAN_loss]
+    return (D_loss, GAN_loss)
