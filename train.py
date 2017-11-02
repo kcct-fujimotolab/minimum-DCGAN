@@ -40,7 +40,7 @@ def main():
     optimizer = Adam(lr=1e-5, beta_1=0.1)
     D.compile(loss='binary_crossentropy', optimizer=optimizer)
     # この値にするとうまくいく、正直職人芸
-    optimizer = Adam(lr=2e-4, beta_1=0.5)
+    optimizer = Adam(lr=1e-4, beta_1=0.5)
     GAN.compile(loss='binary_crossentropy', optimizer=optimizer)
     # モデルを保存
     save_model(G, 'G_model.json')
