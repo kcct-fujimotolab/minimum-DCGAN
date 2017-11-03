@@ -6,7 +6,7 @@ from utils.image import save_images, load_images, to_dirname
 from utils.generation import generate
 from utils.training import train
 # 使用ネットワーク
-from networks.relu import build_generator, build_discriminator, build_GAN
+from networks.leakyrelu import build_generator, build_discriminator, build_GAN
 
 
 def get_args():
