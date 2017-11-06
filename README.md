@@ -1,13 +1,13 @@
 # DCGAN
-Implementation of basic and versatile DCGAN model using Keras.
+Implementation of basic and universal DCGAN model using Keras.
 
 ## Description
 
-These programs can load images from the specified directory, resize and train.
+These programs can load images from the specified directory, resize these images and train the model.
 You can record images generated during training.
-You can load trained models and generate images.
+Also you can load trained models and generate images.
 
-## Requirement
+## Requirements
 
 - Python 3.0 or more
 - Keras 2.0 or more (Tensorflow backend)
@@ -32,7 +32,7 @@ mkdir images
 3. Collect images (more than thousands better):
 ```sh
 ls images/
-data000.jpg   data001.jpg   ...   data999.jpg
+data0000.jpg   data0001.jpg   ...   data9999.jpg
 ```
 
 4. Start training with specifying image size, number of epochs, data set directory, etc.:
@@ -52,21 +52,21 @@ python generate.py --output gen/ --batch 64
 ### train.py
 
 `--input` `-i`: data sets path (default `-i images/`)  
-`--size` `-z`: image size during training, **2 values required**, **must be a multiple of 8** (default `-z 64 64`)  
+`--size` `-z`: image size during training, **2 values required**, **must be multiples of 8** (default `-z 64 64`)  
 `--epoch` `-e`: number of epochs (default `-e 500`)  
 `--batch` `-b`: batch size (default `-b 64`)  
-`--dim` `-d`: generator input dimension (default `-d 100`)  
+`--dim` `-d`: input dimension of generator (default `-d 100`)  
 `--output` `-o`: output directory path (default `-i gen/`)  
-`--save` `-s`: snapshot taking interval (default `-i 20`)
+`--save` `-s`: taking snapshot interval (default `-i 20`)
 
 ### generate.py
 
-`--output` `-o` output directory path (default `-o gen/`)  
-`--batch` `-b` number of generated images (default `-b 64`)
+`--output` `-o`: output directory path (default `-o gen/`)  
+`--batch` `-b`: number of generated images (default `-b 64`)
 
 ## Results
 
-We extracted 4096 images from the face data provided [Labeled Faces in the Wild](http://vis-www.cs.umass.edu/lfw/), and trained.
+We extracted 4096 images from the face data provided by [Labeled Faces in the Wild](http://vis-www.cs.umass.edu/lfw/), and trained.
 
 ### 30 epochs
 ![30](https://i.imgur.com/PrQkuVP.jpg)
@@ -83,5 +83,5 @@ We extracted 4096 images from the face data provided [Labeled Faces in the Wild]
 ## Author
 
 [Fujimoto Lab](http://www.kobe-kosen.ac.jp/~fujimoto/) in [Kobe City College of Technology](http://www.kobe-kosen.ac.jp)  
-Undergraduate student of Electronic engineering major  
+Undergraduate Student of Electronics Department  
 [@yoidea](https://twitter.com/yoidea)
