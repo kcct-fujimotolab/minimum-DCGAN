@@ -55,7 +55,8 @@ def load_images(name, size, ext='.jpg'):
     # 戻り値
         images : Numpy array, 画像データ
     """
-    images = np.empty((0, size[0], size[1], 3))
+    images = []
+    #images = np.empty((0, size[0], size[1], 3))
     for file in tqdm(os.listdir(name)):
         if os.path.splitext(file)[1] != ext:
             # 拡張子が違うなら処理しない
@@ -66,7 +67,9 @@ def load_images(name, size, ext='.jpg'):
             image.convert("RGB")
         image = image.resize(size)
         image = np.array(image)
-        images = np.concatenate((images, [image]))
+        images.append(image)
+        #images = np.concatenate((images, [image]))
+    images = np.array(images)
     # 256階調のデータを0-1の範囲に正規化する
     images = images / 255
     return images
