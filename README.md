@@ -1,22 +1,23 @@
 # DCGAN
+
 Implementation of basic and universal DCGAN model using Keras.
 
 ## Description
 
-These programs can load images from the specified directory, resize these images and train the model.
-You can record images generated during training.
-Also you can load trained models and generate images.
+These programs can load images from the specified directory, resize these images and train the Keras model.
+Images generated during training can be recorded.
+Also, trained models can be loaded and can be generated images.
 
 ## Requirements
 
-- Python 3.0 or more
-- Keras 2.0 or more (Tensorflow backend)
+- Python 3.0 or newer
+- Keras 2.0 or newer (Tensorflow backend)
 - Pillow
 - numpy
 - tqdm
 - h5py
 
-## Get started
+## Getting started
 
 1. Clone this repository:
 ```sh
@@ -29,18 +30,18 @@ cd DCGAN/
 mkdir images
 ```
 
-3. Collect images (more than thousands better):
+3. Collect images (more than 2000-3000 works better):
 ```sh
 ls images/
 data0000.jpg   data0001.jpg   ...   data9999.jpg
 ```
 
-4. Start training with specifying image size, number of epochs, data set directory, etc.:
+4. Start training by specifying image size, number of epochs, data set directory, etc.:
 ```sh
 python train.py --input images/ --size 64 64 --epoch 1000
 ```
 
-5. Generate images with specifying output directory, number of batches:
+5. Generate images by specifying output directory, number of batches:
 ```sh
 python generate.py --output gen/ --batch 64
 ```
@@ -66,7 +67,7 @@ python generate.py --output gen/ --batch 64
 
 ## Results
 
-We extracted 4096 images from the face data provided by [Labeled Faces in the Wild](http://vis-www.cs.umass.edu/lfw/), and trained.
+We extracted 4096 images from the face data provided by [Labeled Faces in the Wild](http://vis-www.cs.umass.edu/lfw/), and trained with Keras model.
 
 ### 30 epochs
 ![30](https://i.imgur.com/PrQkuVP.jpg)
@@ -82,6 +83,6 @@ We extracted 4096 images from the face data provided by [Labeled Faces in the Wi
 
 ## Author
 
-[Fujimoto Lab](http://www.kobe-kosen.ac.jp/~fujimoto/) in [Kobe City College of Technology](http://www.kobe-kosen.ac.jp)  
+[Fujimoto Lab](http://www.kobe-kosen.ac.jp/~fujimoto/) at [Kobe City College of Technology](http://www.kobe-kosen.ac.jp)  
 Undergraduate Student of Electronics Department  
 [@yoidea](https://twitter.com/yoidea)
