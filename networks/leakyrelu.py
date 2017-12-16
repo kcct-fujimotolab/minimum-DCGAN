@@ -14,7 +14,7 @@ def build_generator(input_dim, output_size):
         model : Keras model, 生成器
     """
     model = Sequential()
-    model.add(Dense(1024, input_dim=input_dim))
+    model.add(Dense(512, input_dim=input_dim))
     unit_size = 256 * output_size[0] // 8 * output_size[1] // 8
     model.add(Dense(unit_size))
     model.add(BatchNormalization())
@@ -55,7 +55,7 @@ def build_discriminator(input_size):
     model.add(LeakyReLU(alpha=0.2))
     model.add(MaxPooling2D(pool_size=(2, 2)))
     model.add(Flatten())
-    model.add(Dense(1024))
+    model.add(Dense(512))
     model.add(LeakyReLU(alpha=0.2))
     model.add(Dense(1))
     model.add(Activation('sigmoid'))
