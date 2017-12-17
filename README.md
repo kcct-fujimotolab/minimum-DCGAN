@@ -54,11 +54,11 @@ python generate.py --output gen/ --batch 64
 
 `--input` `-i`: data sets path (default `-i images/`)  
 `--size` `-z`: image size during training, **2 values required**, **must be multiples of 8** (default `-z 64 64`)  
-`--epoch` `-e`: number of epochs (default `-e 500`)  
+`--epoch` `-e`: number of epochs (default `-e 3000`)  
 `--batch` `-b`: batch size (default `-b 64`)  
 `--dim` `-d`: input dimension of generator (default `-d 100`)  
-`--output` `-o`: output directory path (default `-i gen/`)  
-`--save` `-s`: taking snapshot interval (default `-i 20`)
+`--output` `-o`: output directory path (default `-o gen/`)  
+`--save` `-s`: taking snapshot interval (default `-s 100`)
 
 ### generate.py
 
