@@ -69,17 +69,17 @@ python generate.py --output gen/ --batch 64
 
 We extracted 4096 images from the face data provided by [Labeled Faces in the Wild](http://vis-www.cs.umass.edu/lfw/), and trained with Keras model.
 
-### 30 epochs
-![30](https://i.imgur.com/PrQkuVP.jpg)
+### 1000 epochs
+![1000](https://i.imgur.com/IW8Ja7U.jpg)
 
-### 600 epochs
-![600](https://i.imgur.com/77kPHTO.jpg)
+### 2000 epochs
+![2000](https://i.imgur.com/pywyj2E.jpg)
 
-### 1200 epochs
-![1200](https://i.imgur.com/TWri1m9.jpg)
+### 4000 epochs
+![4000](https://i.imgur.com/ACWbmGx.jpg)
 
-### 1500 epochs
-![1500](https://i.imgur.com/sKjWmpT.jpg)
+### 6000 epochs
+![6000](https://i.imgur.com/ksdqk5X.jpg)
 
 ## Author
 
